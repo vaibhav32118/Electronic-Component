@@ -1,0 +1,22 @@
+<div class="form-group">
+  
+  <label for="title"> Title of Project </label>
+  <input required value="<%= project.title %>" type="text" name="title" id="title" class="form-control">
+
+  <label for="author"> Author of Proejct  </label>
+  <input required value="<%= project.author %>" type="text" name="author" id="author" class="form-control">
+
+  <label for="description"> Description of Project </label>
+  <textarea name="description" id="description" class="form-control">
+    <%= project.description %>
+  </textarea>
+  
+  <label for="markdown"> Link of Project page </label>
+  <textarea required name="markdown" id="markdown" class="form-control">
+    <%= project.markdown %>
+  </textarea>
+
+</div>
+
+<button type="submit" class="btn btn-primary">Save</button>
+<a href="/project" class="btn btn-secondary">Cancel</a>
