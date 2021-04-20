@@ -13,7 +13,8 @@ const videoRouter = require('./routes/video');
 const methodOverride = require('method-override');
 const path = require("path");
 const app = express()
-const conn_str = "mongodb://localhost/Eweb"
+const conn_str = "mongodb+srv://vaibhav32118:tJr4Y6nrDMKdFVt@cluster0.wx7wt.mongodb.net/Eweb?retryWrites=true&w=majority"
+
 
 mongoose.connect(conn_str, {
     useNewUrlParser: true,
