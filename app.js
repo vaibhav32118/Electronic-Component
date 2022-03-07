@@ -47,14 +47,6 @@ app.get('/component', async(req, res) => {
 })
 app.use('/component', componentRouter)
 
-app.get('/articles', async(req, res) => {
-    const articles = await Article.find().sort({
-        createdAt: 'desc'
-    })
-    res.render('articles/index', { articles: articles})
-})
-app.use('/articles', articlesRouter)
-
 app.get('/project', async(req, res) => {
     const project = await Project.find().sort({
         createdAt: 'desc'
