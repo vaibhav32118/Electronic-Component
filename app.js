@@ -12,6 +12,7 @@ const videoRouter = require('./routes/video');
 const methodOverride = require('method-override');
 const path = require("path");
 const app = express()
+dotenv.config();  
 const conn_str = process.env.DATABASE_URL
 
 
