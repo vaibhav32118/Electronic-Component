@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const dotenv = require('dotenv'); 
 const Component = require('./models/component')
 const Project = require('./models/project')
 const Datasheet = require('./models/datasheet');
@@ -11,7 +12,7 @@ const videoRouter = require('./routes/video');
 const methodOverride = require('method-override');
 const path = require("path");
 const app = express()
-const conn_str = "mongodb+srv://vaibhav32118:tJr4Y6nrDMKdFVt@cluster0.wx7wt.mongodb.net/Eweb?retryWrites=true&w=majority"
+const conn_str = process.env.DATABASE_URL
 
 
 mongoose.connect(conn_str, {
